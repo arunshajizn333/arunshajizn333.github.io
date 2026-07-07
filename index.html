@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arun Shaji — Full-Stack Developer | MEAN & MERN Stack</title>
+  <meta name="description" content="Portfolio of Arun Shaji — Full-Stack Developer specializing in MEAN & MERN stack. Building scalable web applications with Angular, React, Node.js, and MongoDB." />
+  <meta name="keywords" content="Arun Shaji, Full-Stack Developer, MEAN Stack, MERN Stack, Angular, React, Node.js, Portfolio" />
+  <meta name="author" content="Arun Shaji" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Arun Shaji — Full-Stack Developer" />
+  <meta property="og:description" content="Full-Stack Developer specializing in MEAN & MERN stack, building scalable web applications." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://arunshajizn333.github.io" />
+
+  <!-- Favicon (inline SVG) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🚀</text></svg>" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="loading">
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursor-dot"></div>
+  <div class="cursor-outline" id="cursor-outline"></div>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="preloader-ring"></div>
+    <div class="preloader-text">Loading</div>
+  </div>
+
+
+  <!-- Scroll Progress -->
+  <div id="scroll-progress"></div>
+
+  <!-- ======== NAVBAR ======== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#hero" class="nav-logo"><span>AS</span></a>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="resume.pdf" download class="nav-link">Resume</a></li>
+        <li><a href="#contact" class="nav-link nav-cta">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ======== HERO ======== -->
+  <section class="hero" id="hero">
+    <canvas id="particles-canvas"></canvas>
+    <div class="container">
+      <div class="hero-content">
+        <p class="hero-greeting animate-on-scroll fade-up">
+          <span class="wave">👋</span> Hello, I'm
+        </p>
+        <h1 class="hero-name animate-on-scroll fade-up" style="--delay:0.1s">
+          <span class="gradient-text">Arun Shaji</span>
+        </h1>
+        <p class="hero-role animate-on-scroll fade-up" style="--delay:0.2s">
+          I'm a <span class="typing-text"></span><span class="typing-cursor">|</span>
+        </p>
+        <p class="hero-description animate-on-scroll fade-up" style="--delay:0.3s">
+          Crafting scalable, high-performance web applications with the MEAN &amp; MERN stack. 
+          Passionate about clean code, seamless user experiences, and turning ideas into production-grade products.
+        </p>
+        <div class="hero-buttons animate-on-scroll fade-up" style="--delay:0.4s">
+          <a href="#contact" class="btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Get In Touch
+          </a>
+          <a href="Arun_Shaji_Cv.pdf" download class="btn-outline">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download CV
+          </a>
+          <a href="https://github.com/arunshajizn333" target="_blank" rel="noopener" class="btn-outline" aria-label="View GitHub">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="hero-image animate-on-scroll scale-up" style="--delay:0.3s">
+        <div class="avatar-wrapper">
+          <div class="avatar-glow"></div>
+          <div class="avatar-ring-2">
+            <span class="avatar-dot"></span>
+            <span class="avatar-dot"></span>
+            <span class="avatar-dot"></span>
+          </div>
+          <div class="avatar-ring"></div>
+          <div class="avatar-img">
+            <img src="avatar.png" alt="Arun Shaji — Full-Stack Developer" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <div class="scroll-mouse"></div>
+      <span>Scroll Down</span>
+    </div>
+  </section>
+
+  <!-- ======== ABOUT ======== -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-heading animate-on-scroll fade-up">
+        <span class="section-tag">Get To Know</span>
+        <h2>About <span class="gradient-text">Me</span></h2>
+        <div class="heading-line"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-avatar animate-on-scroll fade-left">
+          <div class="about-avatar-frame">
+            <img src="arun-profile.png" alt="Arun Shaji" />
+          </div>
+          <div class="about-avatar-decor"></div>
+        </div>
+        <div class="about-content animate-on-scroll fade-right">
+          <h3>Full-Stack Developer with a passion for <span class="gradient-text">building impactful products</span></h3>
+          <p class="about-text">
+            I'm a Full-Stack Developer specializing in the MEAN and MERN stacks with hands-on experience building scalable APIs, 
+            reusable Angular components, and real-world web applications. I have a strong understanding of authentication, 
+            database modeling, clean code principles, and REST API development.
+          </p>
+          <p class="about-text">
+            Currently pursuing my BCA at Manipal University Jaipur, I've complemented my academic journey with certifications 
+            in MERN Stack (SMEClabs, NSDC) and MEAN Stack training at Inmakes Infotech. I'm focused on continuous growth 
+            and eager to contribute to production-grade applications that solve real-world problems.
+          </p>
+          <div class="about-info-grid">
+            <div class="about-info-item">
+              <span class="label">📍 Location</span>
+              <span class="value">Kerala, India</span>
+            </div>
+            <div class="about-info-item">
+              <span class="label">📧 Email</span>
+              <span class="value">arunshajizn@gmail.com</span>
+            </div>
+            <div class="about-info-item">
+              <span class="label">🎓 Degree</span>
+              <span class="value">BCA (Pursuing)</span>
+            </div>
+            <div class="about-info-item">
+              <span class="label">💼 Open to</span>
+              <span class="value">Full-Time Roles</span>
+            </div>
+          </div>
+          <div class="about-stats">
+            <div class="stat-card animate-on-scroll scale-up" style="--delay:0.1s">
+              <div class="stat-number gradient-text" data-target="6" data-suffix="+">0+</div>
+              <div class="stat-label">Projects Built</div>
+            </div>
+            <div class="stat-card animate-on-scroll scale-up" style="--delay:0.2s">
+              <div class="stat-number gradient-text" data-target="2" data-suffix="+">0+</div>
+              <div class="stat-label">Years Coding</div>
+            </div>
+            <div class="stat-card animate-on-scroll scale-up" style="--delay:0.3s">
+              <div class="stat-number gradient-text" data-target="8" data-suffix="+">0+</div>
+              <div class="stat-label">Technologies</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== SKILLS ======== -->
+  <section class="skills" id="skills">
+    <div class="container">
+      <div class="section-heading animate-on-scroll fade-up">
+        <span class="section-tag">What I Work With</span>
+        <h2>My <span class="gradient-text">Tech Stack</span></h2>
+        <p>Technologies and tools I use to bring ideas to life</p>
+        <div class="heading-line"></div>
+      </div>
+      <div class="skills-categories">
+        <!-- Frontend -->
+        <div class="skill-category cat-frontend animate-on-scroll fade-up" style="--delay:0.1s">
+          <h3><span class="cat-icon">⚡</span> Frontend</h3>
+          <div class="skills-grid">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><span class="skill-icon">🅰️</span> Angular</span>
+                <span class="skill-percentage">85%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" data-progress="85"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><span class="skill-icon">⚛️</span> React.js</span>
+                <span class="skill-percentage">80%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" data-progress="80"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><span class="skill-icon">📜</span> JavaScript (ES6+)</span>
+                <span class="skill-percentage">85%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" data-progress="85"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><span class="skill-icon">🔷</span> TypeScript</span>
+                <span class="skill-percentage">75%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" data-progress="75"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><span class="skill-icon">🎨</span> HTML5 &amp; CSS3</span>
+                <span class="skill-percentage">90%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" data-progress="90"></div></div>
+            </div>
+          </div>
+        </div>
+        <!-- Backend -->
+        <div class="skill-category cat-backend animate-on-scroll fade-up" style="--delay:0.2s">
+          <h3><span class="cat-icon">🔧</span> Backend</h3>
+          <div class="skills-grid">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><span class="skill-icon">💚</span> Node.js</span>
+                <span class="skill-percentage">82%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" data-progress="82"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><span class="skill-icon">🚂</span> Express.js</span>
+                <span class="skill-percentage">80%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" data-progress="80"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><span class="skill-icon">🔐</span> RESTful APIs</span>
+                <span class="skill-percentage">85%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" data-progress="85"></div></div>
+            </div>
+          </div>
+        </div>
+        <!-- Database -->
+        <div class="skill-category cat-database animate-on-scroll fade-up" style="--delay:0.3s">
+          <h3><span class="cat-icon">🗄️</span> Database</h3>
+          <div class="skills-grid">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><span class="skill-icon">🍃</span> MongoDB</span>
+                <span class="skill-percentage">82%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" data-progress="82"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><span class="skill-icon">🐘</span> PostgreSQL</span>
+                <span class="skill-percentage">65%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" data-progress="65"></div></div>
+            </div>
+          </div>
+        </div>
+        <!-- Tools -->
+        <div class="skill-category cat-tools animate-on-scroll fade-up" style="--delay:0.4s">
+          <h3><span class="cat-icon">🛠️</span> Tools &amp; Other</h3>
+          <div class="skills-grid">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><span class="skill-icon">🌿</span> Git &amp; GitHub</span>
+                <span class="skill-percentage">80%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" data-progress="80"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><span class="skill-icon">📬</span> Postman / Thunder</span>
+                <span class="skill-percentage">78%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" data-progress="78"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><span class="skill-icon">🎯</span> Figma</span>
+                <span class="skill-percentage">70%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" data-progress="70"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== PROJECTS ======== -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <div class="section-heading animate-on-scroll fade-up">
+        <span class="section-tag">My Work</span>
+        <h2>Featured <span class="gradient-text">Projects</span></h2>
+        <p>Real-world applications built with modern technologies</p>
+        <div class="heading-line"></div>
+      </div>
+      <div class="projects-grid">
+        <!-- Project 1: Velocecode -->
+        <div class="project-card animate-on-scroll fade-up" style="--delay:0.1s">
+          <div class="project-header">
+            <div class="project-icon">⚡</div>
+            <div class="project-links">
+              <a href="https://github.com/whiletwogroups/velocecode.git" target="_blank" rel="noopener" class="project-link" aria-label="GitHub repository">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+              <a href="https://velocecode.vercel.app/" target="_blank" rel="noopener" class="project-link" aria-label="Live Demo">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Velocecode</h3>
+            <p class="project-description">
+              An interactive coding and tech roadmap platform providing structured 180-day plans across 8 career-ready paths. Includes daily task tracking, curated study material links, and project building checkpoints.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">React.js</span>
+              <span class="tech-tag">Firebase</span>
+              <span class="tech-tag">Firestore</span>
+              <span class="tech-tag">React Router</span>
+              <span class="tech-tag">CSS3</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Hospital Management -->
+        <div class="project-card animate-on-scroll fade-up" style="--delay:0.2s">
+          <div class="project-header">
+            <div class="project-icon">🏥</div>
+            <div class="project-links">
+              <a href="https://github.com/arunshajizn333/Hospital-Management-WebApp" target="_blank" rel="noopener" class="project-link" aria-label="GitHub repository">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Hospital Management System</h3>
+            <p class="project-description">
+              Full-featured hospital management web app with role-based access control for public users, patients (appointments, history), 
+              doctors (medical records), and administrators (system management). Includes secure authentication and comprehensive dashboards.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Angular</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">Express.js</span>
+              <span class="tech-tag">MongoDB</span>
+              <span class="tech-tag">TypeScript</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Expense Tracker -->
+        <div class="project-card animate-on-scroll fade-up" style="--delay:0.3s">
+          <div class="project-header">
+            <div class="project-icon">💰</div>
+            <div class="project-links">
+              <a href="https://github.com/arunshajizn333/Personal-Expense-Tracker-Application" target="_blank" rel="noopener" class="project-link" aria-label="GitHub repository">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Personal Expense Tracker</h3>
+            <p class="project-description">
+              Finance management tool for tracking income, expenses, and savings with interactive data visualization, 
+              transaction history, category-wise analytics, and budget insights. Clean UI with real-time chart updates.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Angular</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">Express.js</span>
+              <span class="tech-tag">MongoDB</span>
+              <span class="tech-tag">Chart.js</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: Keeper App -->
+        <div class="project-card animate-on-scroll fade-up" style="--delay:0.4s">
+          <div class="project-header">
+            <div class="project-icon">📝</div>
+            <div class="project-links">
+              <a href="https://github.com/arunshajizn333/KeeperApp" target="_blank" rel="noopener" class="project-link" aria-label="GitHub repository">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Keeper App</h3>
+            <p class="project-description">
+              A Google Keep-inspired note-taking application with create, read, and delete functionality. 
+              Features a clean, responsive design with card-based notes layout and smooth interactions.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">React.js</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">CSS3</span>
+              <span class="tech-tag">Material UI</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5: Netflix Clone -->
+        <div class="project-card animate-on-scroll fade-up" style="--delay:0.5s">
+          <div class="project-header">
+            <div class="project-icon">🎬</div>
+            <div class="project-links">
+              <a href="https://github.com/arunshajizn333/Netflix-Clone" target="_blank" rel="noopener" class="project-link" aria-label="GitHub repository">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Netflix Clone</h3>
+            <p class="project-description">
+              A pixel-perfect Netflix UI clone with dynamic content loading, responsive carousel sections, 
+              movie categories, and hover preview effects. Replicates the streaming platform's core UX patterns.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">React.js</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">TMDB API</span>
+              <span class="tech-tag">CSS3</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6: MovieLand -->
+        <div class="project-card animate-on-scroll fade-up" style="--delay:0.6s">
+          <div class="project-header">
+            <div class="project-icon">🎥</div>
+            <div class="project-links">
+              <a href="https://github.com/arunshajizn333/MovieLand" target="_blank" rel="noopener" class="project-link" aria-label="GitHub repository">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">MovieLand</h3>
+            <p class="project-description">
+              A movie search application that lets users browse and discover films using the OMDb API. 
+              Features real-time search, dynamic movie cards, and a sleek, modern interface.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">React.js</span>
+              <span class="tech-tag">OMDb API</span>
+              <span class="tech-tag">CSS3</span>
+              <span class="tech-tag">JavaScript</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== EXPERIENCE ======== -->
+  <section class="experience" id="experience">
+    <div class="container">
+      <div class="section-heading animate-on-scroll fade-up">
+        <span class="section-tag">Where I've Worked</span>
+        <h2>Professional <span class="gradient-text">Experience</span></h2>
+        <div class="heading-line"></div>
+      </div>
+      <div class="timeline">
+        <!-- Exp 1: Bridgeon -->
+        <div class="timeline-item animate-on-scroll fade-left" style="--delay:0.1s">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-date">Feb 2026 — Mar 2026</span>
+            <h3 class="timeline-role">Admissions Counselor</h3>
+            <p class="timeline-company">Bridgeon, Malappuram (On-site)</p>
+            <ul class="timeline-desc">
+              <li>Provided career counseling and admissions guidance to students</li>
+              <li>Managed student data and application tracking processes</li>
+              <li>Developed strong communication and client-handling skills</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Exp 2: Brototype -->
+        <div class="timeline-item animate-on-scroll fade-right" style="--delay:0.2s">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-date">Nov 2025 — Present</span>
+            <h3 class="timeline-role">Business Development Executive</h3>
+            <p class="timeline-company">Brototype, Kochi</p>
+            <ul class="timeline-desc">
+              <li>Guiding students toward IT career paths using strong technical knowledge</li>
+              <li>Building rapport with prospects and streamlining tech training onboarding</li>
+              <li>Leveraging deep understanding of full-stack development for tech consulting</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Exp 3: Inmakes Intern -->
+        <div class="timeline-item animate-on-scroll fade-left" style="--delay:0.3s">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-date">Feb 2025 — May 2025</span>
+            <h3 class="timeline-role">MEAN Stack Developer Intern</h3>
+            <p class="timeline-company">Inmakes Infotech Pvt Ltd, Kochi</p>
+            <ul class="timeline-desc">
+              <li>Developed MEAN stack features including Angular components and Node.js/Express APIs</li>
+              <li>Built and tested API endpoints with frontend component integration</li>
+              <li>Debugged modules and optimized code to improve application performance</li>
+              <li>Received targeted training in Angular alongside MongoDB proficiency</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Exp 4: SMEClabs -->
+        <div class="timeline-item animate-on-scroll fade-right" style="--delay:0.4s">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-date">Mar 2024 — Sep 2024</span>
+            <h3 class="timeline-role">Full-Stack Developer (MERN)</h3>
+            <p class="timeline-company">SMEClabs, Kochi</p>
+            <ul class="timeline-desc">
+              <li>Developed dynamic MERN stack applications with responsive React.js frontends</li>
+              <li>Built robust backend functionalities with Node.js and Express.js</li>
+              <li>Managed MongoDB databases and practiced API integration</li>
+              <li>Completed MERN Stack certification from NSDC</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== EDUCATION ======== -->
+  <section class="education" id="education">
+    <div class="container">
+      <div class="section-heading animate-on-scroll fade-up">
+        <span class="section-tag">My Learning Journey</span>
+        <h2>Education &amp; <span class="gradient-text">Certifications</span></h2>
+        <div class="heading-line"></div>
+      </div>
+      <div class="education-grid">
+        <div class="education-card animate-on-scroll fade-up" style="--delay:0.1s">
+          <span class="education-year">Aug 2025 — Jul 2028</span>
+          <h3 class="education-degree">Bachelor of Computer Applications (BCA)</h3>
+          <p class="education-school">Manipal University Jaipur</p>
+          <span class="education-status status-pursuing">🎓 Pursuing</span>
+        </div>
+        <div class="education-card animate-on-scroll fade-up" style="--delay:0.2s">
+          <span class="education-year">Completed Dec 2024</span>
+          <h3 class="education-degree">Full Stack Developer Certification (MERN)</h3>
+          <p class="education-school">SMEClabs, NSDC — Kaloor, Kochi</p>
+          <span class="education-status status-completed">✅ Completed</span>
+        </div>
+        <div class="education-card animate-on-scroll fade-up" style="--delay:0.3s">
+          <span class="education-year">Feb 2025 — May 2025</span>
+          <h3 class="education-degree">MEAN Stack Development Training</h3>
+          <p class="education-school">Inmakes Infotech Pvt Ltd, Kochi</p>
+          <span class="education-status status-completed">✅ Completed</span>
+        </div>
+        <div class="education-card animate-on-scroll fade-up" style="--delay:0.4s">
+          <span class="education-year">Jun 2018 — Mar 2020</span>
+          <h3 class="education-degree">Plus Two — Computer Commerce</h3>
+          <p class="education-school">PHSS Pandallur, Kerala</p>
+          <span class="education-status status-completed">✅ Completed</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== CONTACT ======== -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-heading animate-on-scroll fade-up">
+        <span class="section-tag">Let's Connect</span>
+        <h2>Get In <span class="gradient-text">Touch</span></h2>
+        <p>Have a project in mind or want to chat? I'd love to hear from you!</p>
+        <div class="heading-line"></div>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info animate-on-scroll fade-left">
+          <h3>Let's work <span class="gradient-text">together</span></h3>
+          <p>
+            I'm currently looking for full-time opportunities as a Full-Stack Developer. 
+            Whether you have a project, a job opening, or just want to say hi — my inbox is always open!
+          </p>
+          <div class="contact-item">
+            <div class="contact-icon">📧</div>
+            <div class="contact-detail">
+              <div class="detail-label">Email</div>
+              <a href="mailto:arunshajizn@gmail.com" class="detail-value">arunshajizn@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📱</div>
+            <div class="contact-detail">
+              <div class="detail-label">Phone</div>
+              <a href="tel:+918848558778" class="detail-value">+91 884 855 8778</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div class="contact-detail">
+              <div class="detail-label">Location</div>
+              <span class="detail-value">Irinjalakuda, Thrissur, Kerala</span>
+            </div>
+          </div>
+          <div class="contact-socials">
+            <a href="https://github.com/arunshajizn333" target="_blank" rel="noopener" class="social-btn github" aria-label="GitHub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/arun-shaji-zn/" target="_blank" rel="noopener" class="social-btn linkedin" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="mailto:arunshajizn@gmail.com" class="social-btn email" aria-label="Email">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="contact-form-wrapper animate-on-scroll fade-right">
+          <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <!-- Web3Forms Access Key -->
+            <input type="hidden" name="access_key" value="9f06da74-fa41-4c21-b4dd-77115e6050ed">
+            <input type="hidden" name="subject" value="New Contact Form Submission from Portfolio">
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="john@example.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Job Opportunity / Project Idea" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
+            </div>
+            <button type="submit" class="btn-submit">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== FOOTER ======== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <a href="#hero" class="footer-logo"><span class="gradient-text">Arun Shaji</span></a>
+        <div class="footer-links">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <p>&copy; 2025 Arun Shaji. Designed &amp; Built with 💙</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button id="back-to-top" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
